@@ -1,7 +1,7 @@
 {
   "name": "blog-ts",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "dependencies": {
     "acorn": "^8.11.2",
     "acorn-import-assertions": "^1.9.0",
@@ -151,8 +151,15 @@
     "yallist": "^4.0.0",
     "yn": "^3.1.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/webpack-dev-server": "^4.7.2",
+    "webpack-dev-server": "^4.7.4"
+  },
   "scripts": {
+    "start": "webpack serve --env port=3000",
+    "build:prod": "webpack --env mode=production",
+    "build:dev": "webpack --env mode=development",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
